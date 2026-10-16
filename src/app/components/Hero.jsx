@@ -110,78 +110,80 @@ export default function Hero() {
       </div>
 
       <div className="hero-inner">
-        {/* Floating Notification Badges - Left */}
-        <div className="hero-floating-badges-left" aria-hidden="true">
-          {/* WhatsApp Alert Card */}
-          <div className="hero-notif-card hero-notif-whatsapp">
-            <div className="notif-header">
-              <span className="notif-whatsapp-icon">💬</span>
-              <span className="notif-title">WhatsApp Alert</span>
-            </div>
-            <div className="notif-sub-bold">Get notified on whatsapp</div>
-            <div className="notif-detail">You&apos;ll get all important updates on your whatsapp</div>
-          </div>
-
-          {/* Student match count pill */}
-          <div className="hero-floating-badge hero-floating-badge--match">
-            <div className="badge-avatars">
-              <span className="badge-avatar" style={{ background: "#6366f1" }}>AK</span>
-              <span className="badge-avatar" style={{ background: "#ec4899" }}>PR</span>
-              <span className="badge-avatar" style={{ background: "#14b8a6" }}>SN</span>
-            </div>
-            <div>
-              <div className="badge-text-main">🔥 142 students matched today</div>
-              <div className="badge-text-sub">Just now • IIT, BITS, VIT</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Notification Badges - Right */}
-        <div className="hero-floating-badges-right" aria-hidden="true">
-          {/* Resume Builder Card */}
-          <div className="hero-notif-card hero-notif-resume">
-            <div className="notif-header">
-              <span className="notif-resume-icon">⚡</span>
-              <span className="notif-title">Resume Builder</span>
-            </div>
-            <div className="notif-sub-bold">Build Your Resume</div>
-            <div className="notif-detail">Our resume builder gives you dynamic options to build better &amp; faster resume that got you hired</div>
-          </div>
-
-          {/* Recruiter shortlist pill */}
-          <div className="hero-floating-badge hero-floating-badge--recruiter">
-            <span className="badge-recruiter-icon">🏢</span>
-            <div>
-              <div className="badge-text-main">
-                <span style={{ color: "#0084ff", fontWeight: 700 }}>Radiant Info</span> shortlisted 8 interns
+        {/* Top 3-Column Header matching Figma 1240px bounds */}
+        <div className="hero-top-grid">
+          
+          {/* Left Column: WhatsApp Alert + Student Match Pill */}
+          <div className="hero-side-column hero-side-column--left">
+            <div className="hero-notif-card hero-notif-whatsapp">
+              <div className="notif-header">
+                <span className="notif-whatsapp-icon">💬</span>
+                <span className="notif-title">WhatsApp Alert</span>
               </div>
-              <div className="badge-text-sub">Verified recruiter • 2 days ago</div>
+              <div className="notif-sub-bold">Get notified on whatsapp</div>
+              <div className="notif-detail">You&apos;ll get all important updates on your whatsapp</div>
+            </div>
+
+            <div className="hero-floating-badge hero-floating-badge--match">
+              <div className="badge-avatars">
+                <span className="badge-avatar" style={{ background: "#6366f1" }}>AK</span>
+                <span className="badge-avatar" style={{ background: "#ec4899" }}>PR</span>
+                <span className="badge-avatar" style={{ background: "#14b8a6" }}>SN</span>
+              </div>
+              <div>
+                <div className="badge-text-main">🔥 142 students matched today</div>
+                <div className="badge-text-sub">Just now • IIT, BITS, VIT</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Hero Central Header */}
-        <div className="hero-heading">
-          <div className="hero-assistant-pill">
-            <span className="pill-robot-icon">✨</span>
-            <span>AI-Powered Campus Assistant</span>
+          {/* Center Column: Assistant Pill + Connect 10X Faster + Subtitle + Question */}
+          <div className="hero-center-column">
+            <div className="hero-assistant-pill">
+              <span className="pill-robot-icon">🤖</span>
+              <span>AI-Powered Campus Assistant</span>
+            </div>
+
+            <h1 className="hero-title">
+              Connect <span className="hero-gradient-text">10X Faster.</span>
+            </h1>
+
+            <p className="hero-subtitle">
+              One platform connecting students, colleges &amp; employers — faster.
+            </p>
+
+            <div className="hero-question-row">
+              <span className="hero-sparkle" aria-hidden="true">✦</span>
+              <h2>What are you looking for?</h2>
+              <span className="hero-sparkle" aria-hidden="true">✦</span>
+            </div>
           </div>
 
-          <h1 className="hero-title">
-            Connect <span className="hero-gradient-text">10X Faster.</span>
-          </h1>
-          <p className="hero-subtitle">
-            One platform connecting students, colleges &amp; employers — faster.
-          </p>
+          {/* Right Column: Resume Builder + Recruiter Shortlist Pill */}
+          <div className="hero-side-column hero-side-column--right">
+            <div className="hero-notif-card hero-notif-resume">
+              <div className="notif-header">
+                <span className="notif-resume-icon">⚡</span>
+                <span className="notif-title">Resume Builder</span>
+              </div>
+              <div className="notif-sub-bold">Build Your Resume</div>
+              <div className="notif-detail">Our resume builder gives you dynamic options to build better &amp; faster resume that got you hired</div>
+            </div>
 
-          <div className="hero-question-row">
-            <span className="hero-sparkle" aria-hidden="true">✦</span>
-            <h2>What are you looking for?</h2>
-            <span className="hero-sparkle" aria-hidden="true">✦</span>
+            <div className="hero-floating-badge hero-floating-badge--recruiter">
+              <span className="badge-recruiter-icon">🏢</span>
+              <div>
+                <div className="badge-text-main">
+                  <span style={{ color: "#0084ff", fontWeight: 700 }}>Radiant Info</span> shortlisted 8 interns
+                </div>
+                <div className="badge-text-sub">Verified recruiter • 2 days ago</div>
+              </div>
+            </div>
           </div>
+
         </div>
 
-        {/* 3 Interactive Hero Cards */}
+        {/* 3 Interactive Hero Cards directly below */}
         <div className="hero-cards" role="group" aria-label="Role selection cards">
           {cards.map((card) => {
             const isSelected = activeCard === card.id;
@@ -250,7 +252,7 @@ export default function Hero() {
                 </div>
 
                 <a
-                  href={card.id === "card-job" ? "#resume-scanner" : "#colleges"}
+                  href={card.id === "card-job" ? "#for-students" : "#colleges"}
                   className="hero-card-action-btn"
                   id={`${card.id}-action`}
                 >
@@ -262,7 +264,7 @@ export default function Hero() {
           })}
         </div>
 
-        {/* 4 Stats Box */}
+        {/* 4 Stats Box matching Figma bounds */}
         <div className="hero-stats-card" aria-label="Platform metrics">
           {stats.map((s, i) => (
             <div className="hero-stat-box" key={i}>

@@ -1,9 +1,6 @@
 "use client";
-import { useState } from "react";
 
 export default function AppSection() {
-  const [activeDot, setActiveDot] = useState(2); // Center active by default
-
   return (
     <section className="app-section" id="app-interface" aria-label="CampusPe Mobile App Showcase">
       <div className="app-section__inner">
@@ -18,7 +15,7 @@ export default function AppSection() {
           Experience the power of a unified campus ecosystem right in your pocket. <strong>CampusPe</strong> offers a tailored interface for every user: students can explore trending courses, colleges can showcase their campus life, and companies can post job vacancies directly to a pool of qualified candidates.
         </p>
 
-        {/* Showcase Image of the 5 Phones */}
+        {/* All 5 Phones Showcase Image */}
         <div className="app-showcase-image-wrap">
           <img
             src="/app_interface_mockup.png"
@@ -27,15 +24,13 @@ export default function AppSection() {
           />
         </div>
 
-        {/* 5 Pagination Dots */}
+        {/* 5 Indicator Dots */}
         <div className="app-dots-row" role="tablist" aria-label="App screen indicators">
           {[0, 1, 2, 3, 4].map((idx) => (
-            <button
+            <span
               key={idx}
-              type="button"
-              className={`app-dot-btn ${activeDot === idx ? "app-dot-btn--active" : ""}`}
-              onClick={() => setActiveDot(idx)}
-              aria-label={`View app screen ${idx + 1}`}
+              className={`app-dot-indicator ${idx === 2 ? "app-dot-indicator--active" : ""}`}
+              aria-label={`Screen ${idx + 1}`}
             />
           ))}
         </div>

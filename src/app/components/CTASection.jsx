@@ -9,20 +9,21 @@ export default function CTASection() {
         <div className="glass-support-card">
           <h2 className="glass-support-title">Still have questions?</h2>
           <p className="glass-support-desc">
-            Our support team is here to help you succeed. Get in touch anytime.
+            Our team is here to help you get the most out of CampusPe.
           </p>
 
           <div className="glass-support-actions">
             <a
-              href="mailto:contactus@campuspe.com"
+              href="#download-app"
               className="support-pill support-pill--primary"
-              id="btn-contact-support"
+              id="btn-download-app-cta"
             >
-              <span className="pill-label">Contact Support</span>
+              <span className="pill-label">Download App</span>
               <span className="pill-circle pill-circle--white">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0084ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
               </span>
             </a>
@@ -30,9 +31,9 @@ export default function CTASection() {
             <a
               href="tel:+916362606464"
               className="support-pill support-pill--outline"
-              id="btn-schedule-call"
+              id="btn-talk-team"
             >
-              <span className="pill-label">Schedule a Call</span>
+              <span className="pill-label">Talk to our Team</span>
               <span className="pill-circle pill-circle--blue">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
