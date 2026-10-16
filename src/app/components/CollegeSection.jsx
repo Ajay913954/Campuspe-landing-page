@@ -27,8 +27,8 @@ export default function CollegeSection() {
             opportunities.
           </p>
 
-          <a href="#list-college" className="discovery-cta-btn" id="btn-college-list">
-            <span>List Your College</span>
+          <a href="#explore-colleges" className="discovery-cta-btn" id="btn-college-list">
+            <span>Explore Colleges</span>
             <span className="arrow" aria-hidden="true">→</span>
           </a>
         </div>
@@ -38,106 +38,82 @@ export default function CollegeSection() {
           <div className="wf-cards-stack">
             {/* Card 01 */}
             <div className="wf-card">
-              <div className="wf-card-body">
-                <div className="wf-card-meta">
-                  <span className="wf-num">01</span>
-                  <span className="wf-tag">VERIFIED PROFILE</span>
+              <div className="wf-card-main-col">
+                <div className="wf-card-header-row">
+                  <span className="wf-num-badge">01</span>
+                  <h3 className="wf-card-title-inline">Build your college profile</h3>
                 </div>
-                <h3 className="wf-card-title">Build your college profile</h3>
                 <p className="wf-card-desc">
                   Showcase your college, courses, fees, campus, placements and achievements in one structured profile that students and recruiters can discover.
                 </p>
               </div>
               <div className="wf-card-aside">
-                <span className="wf-badge wf-badge--naac">
-                  <svg className="wf-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                    <circle cx="8" cy="8" r="6" />
-                    <polyline points="5.5 8 7 9.5 10.5 6" />
-                  </svg>
-                  NAAC A++ Ready
+                <span className="wf-badge wf-badge--naac-ready">
+                  <span className="wf-icon-check">✓</span> NAAC A++ Ready
                 </span>
-                <span className="wf-badge wf-badge--match">98% Match</span>
+                <span className="wf-badge wf-badge--subtle-outline">Verified</span>
               </div>
             </div>
 
             {/* Card 02 */}
             <div className="wf-card">
-              <div className="wf-card-body">
-                <div className="wf-card-meta">
-                  <span className="wf-num">02</span>
-                  <span className="wf-tag">DIRECT ENROLL</span>
+              <div className="wf-card-main-col">
+                <div className="wf-card-header-row">
+                  <span className="wf-num-badge">02</span>
+                  <h3 className="wf-card-title-inline">Students discover and connect</h3>
                 </div>
-                <h3 className="wf-card-title">Students discover and connect</h3>
                 <p className="wf-card-desc">
-                  Students searching for colleges can discover your profile, explore your courses and fees, and connect directly with your admission team.
+                  Students searching for colleges can discover your profile, explore your courses and fee structures and connect directly with your admissions team.
                 </p>
               </div>
               <div className="wf-card-aside">
-                <span className="wf-badge wf-badge--enquiries">
-                  <svg className="wf-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                    <path d="M14 10.5a2 2 0 0 1-2 2H5l-3 3V3a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v7.5z" />
-                  </svg>
-                  Direct Enquiries
+                <span className="wf-badge wf-badge--blue-outline">
+                  Connect with students
                 </span>
-                <span className="wf-badge wf-badge--whatsapp">
-                  <span className="wf-badge-dot wf-badge-dot--green" />
-                  WHATSAPP / CHAT
+                <span className="wf-badge-sub-text wf-badge-sub-text--green">
+                  98% Match
                 </span>
-                <span className="wf-card-subnote">Avg. response: &lt;15 min</span>
               </div>
             </div>
 
             {/* Card 03 */}
             <div className="wf-card">
-              <div className="wf-card-body">
-                <div className="wf-card-meta">
-                  <span className="wf-num">03</span>
-                  <span className="wf-tag">CAMPUS RECRUITING</span>
+              <div className="wf-card-main-col">
+                <div className="wf-card-header-row">
+                  <span className="wf-num-badge">03</span>
+                  <h3 className="wf-card-title-inline">Connect with recruiters for placements</h3>
                 </div>
-                <h3 className="wf-card-title">Recruiters discover your College</h3>
                 <p className="wf-card-desc">
-                  Companies hiring fresh talent can discover your college, explore your talent and connect with your placement team.
+                  Connect directly with companies looking to hire from your campus. Share student batches and verify placement metrics.
                 </p>
               </div>
               <div className="wf-card-aside">
-                <span className="wf-badge wf-badge--purple-icon">
-                  <svg className="wf-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                    <rect x="2.5" y="4" width="11" height="9.5" rx="1.5" />
-                    <path d="M5.5 4V2.5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1V4" />
-                    <line x1="8" y1="8" x2="8" y2="10" />
-                  </svg>
-                  500+ Hiring Partners
+                <span className="wf-badge wf-badge--purple-outline">
+                  Active Recruiters
                 </span>
-                <span className="wf-badge wf-badge--connect">
-                  <svg className="wf-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                    <circle cx="8" cy="8" r="5" />
-                    <line x1="8" y1="3" x2="8" y2="13" />
-                    <line x1="3" y1="8" x2="13" y2="8" />
-                  </svg>
-                  Connect Directly
+                <span className="wf-badge-sub-text wf-badge-sub-text--purple">
+                  3.2x Placement Growth
                 </span>
               </div>
             </div>
 
             {/* Card 04 */}
             <div className="wf-card">
-              <div className="wf-card-body">
-                <div className="wf-card-meta">
-                  <span className="wf-num">04</span>
-                  <span className="wf-tag">LIVE HUD</span>
+              <div className="wf-card-main-col">
+                <div className="wf-card-header-row">
+                  <span className="wf-num-badge">04</span>
+                  <h3 className="wf-card-title-inline">Track placements in real time</h3>
                 </div>
-                <h3 className="wf-card-title">Track placements in real time</h3>
                 <p className="wf-card-desc">
-                  Track students, interviews, offers and placements from one centralized dashboard.
+                  Track applications, offers and placements across batches in one simple, clean dashboard.
                 </p>
               </div>
               <div className="wf-card-aside">
-                <span className="wf-badge wf-badge--live">
-                  <span className="wf-badge-dot wf-badge-dot--red" />
-                  LIVE PLACEMENTS
+                <span className="wf-badge-red-dot-tag">
+                  <span className="red-dot" /> PLACEMENT ANALYTICS
                 </span>
-                <span className="wf-badge wf-badge--blue-solid">
-                  Students · Interviews · Offers
+                <span className="wf-badge wf-badge--solid-blue-pill">
+                  Real-time data • Live
                 </span>
               </div>
             </div>

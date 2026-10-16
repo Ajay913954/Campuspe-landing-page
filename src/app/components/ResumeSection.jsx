@@ -18,8 +18,8 @@ export default function ResumeSection() {
     }
   };
 
-  const handleDemoUpload = () => {
-    setFileName("Sample_Resume.pdf");
+  const handleSampleSelect = (type) => {
+    setFileName(type === "Tech" ? "Senior_Frontend_Engineer.pdf" : "Marketing_Lead_Resume.pdf");
     setAnalyzing(true);
     setTimeout(() => {
       setAnalyzing(false);
@@ -37,13 +37,6 @@ export default function ResumeSection() {
     <section className="resume-section" id="resume-scanner" aria-label="Resume upload and analysis">
       <div className="resume-section__inner">
         
-        {/* Top Tag */}
-        <div className="resume-tag-pill">
-          <span className="sparkle">✦</span>
-          <span className="tag-bold">TRY IT LIVE</span>
-          <span className="tag-ver">v2.4 AI Engine</span>
-        </div>
-
         {/* Headline */}
         <h2 className="resume-section__title">
           Upload your resume.<br />
@@ -58,30 +51,31 @@ export default function ResumeSection() {
           
           {/* Top Left Floating Badge */}
           <div className="resume-badge-float resume-badge-float--left" aria-hidden="true">
-            <div className="badge-bolt-circle">⚡</div>
+            <div className="badge-check-circle badge-check-circle--green">✓</div>
             <div>
-              <div className="badge-rate-val">98% Match Rate</div>
-              <div className="badge-rate-sub">AI semantic rank</div>
+              <div className="badge-rate-val">100% Verified Profile</div>
+              <div className="badge-rate-sub">Direct recruiter reach</div>
             </div>
           </div>
 
           {/* Main Upload Box */}
           <div className="resume-upload-card">
-            {!fileName && !analyzed && (
+            <input
+              type="file"
+              id="resume-input"
+              accept=".pdf,.doc,.docx"
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
+
+            {!fileName && !analyzing && !analyzed && (
               <div
                 className="upload-dropzone"
                 onClick={() => document.getElementById("resume-input")?.click()}
               >
-                <input
-                  type="file"
-                  id="resume-input"
-                  accept=".pdf,.doc,.docx"
-                  style={{ display: "none" }}
-                  onChange={handleFileChange}
-                />
                 <h3 className="dropzone-title">Upload your resume</h3>
                 <p className="dropzone-sub">
-                  PDF, DOC, or DOCX • Up to 10MB • We&apos;ll use it to understand your skills and experience.
+                  Drag and drop your file here, or click to browse (PDF, DOCX up to 10MB)
                 </p>
 
                 <div className="dropzone-action-row">
@@ -94,17 +88,35 @@ export default function ResumeSection() {
                       document.getElementById("resume-input")?.click();
                     }}
                   >
-                    <span>Upload resume</span>
-                    <span className="upload-arrow">↑</span>
+                    <span>Upload Resume</span>
+                    <span className="upload-arrow">→</span>
                   </button>
                 </div>
 
-                <div className="dropzone-or-text">or drag and drop your file here</div>
-
-                <div className="dropzone-format-pills">
-                  <span className="fmt-pill">PDF</span>
-                  <span className="fmt-pill">DOC</span>
-                  <span className="fmt-pill">DOCX</span>
+                <div className="dropzone-sample-row">
+                  <span className="sample-label">or try with a sample resume:</span>
+                  <div className="sample-chips">
+                    <button
+                      type="button"
+                      className="sample-chip sample-chip--tech"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSampleSelect("Tech");
+                      }}
+                    >
+                      Tech
+                    </button>
+                    <button
+                      type="button"
+                      className="sample-chip sample-chip--nontech"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSampleSelect("Non-Tech");
+                      }}
+                    >
+                      Non-Tech
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
@@ -123,7 +135,7 @@ export default function ResumeSection() {
                 <h4>Resume Analyzed Successfully!</h4>
                 <p className="success-name">{fileName}</p>
                 <div className="success-metrics-pill">
-                  <span>98% Match Rate</span> • <span>12 matching roles found</span>
+                  <span>98% Match Rate</span> • <span>14 matching roles found</span>
                 </div>
                 <div className="success-actions">
                   <a href="#jobs" className="success-btn-explore">
@@ -139,10 +151,10 @@ export default function ResumeSection() {
 
           {/* Bottom Right Floating Badge */}
           <div className="resume-badge-float resume-badge-float--right" aria-hidden="true">
-            <span className="green-dot-pulse" />
+            <div className="badge-briefcase-icon">💼</div>
             <div>
-              <div className="badge-ats-val">ATS Compliant</div>
-              <div className="badge-ats-sub">Standardized parser</div>
+              <div className="badge-ats-val">+450+ Live Jobs</div>
+              <div className="badge-ats-sub">Added today</div>
             </div>
           </div>
 
@@ -151,34 +163,34 @@ export default function ResumeSection() {
         {/* 4 Feature Cards Below Upload */}
         <div className="resume-metrics-row">
           <div className="resume-metric-card">
-            <div className="metric-check-circle">✓</div>
+            <div className="metric-check-circle metric-check-circle--green">✓</div>
             <div>
-              <div className="metric-card-title">Resume analyzed</div>
-              <div className="metric-card-sub">Ready in 4s</div>
+              <div className="metric-card-title">Instant ATS Score</div>
+              <div className="metric-card-sub">Live evaluation</div>
             </div>
           </div>
 
           <div className="resume-metric-card">
-            <div className="metric-check-circle">✓</div>
+            <div className="metric-check-circle metric-check-circle--blue">✓</div>
             <div>
-              <div className="metric-card-title">Skills matched</div>
-              <div className="metric-card-sub">Deep taxonomy</div>
+              <div className="metric-card-title">Skill gap analysis</div>
+              <div className="metric-card-sub">Role requirements</div>
             </div>
           </div>
 
           <div className="resume-metric-card">
-            <div className="metric-check-circle">✓</div>
+            <div className="metric-check-circle metric-check-circle--purple">✓</div>
             <div>
-              <div className="metric-card-title">Experience matched</div>
-              <div className="metric-card-sub">Contextual seniority</div>
+              <div className="metric-card-title">Fast &amp; easy applied</div>
+              <div className="metric-card-sub">One-tap workflows</div>
             </div>
           </div>
 
           <div className="resume-metric-card">
-            <div className="metric-check-circle">✓</div>
+            <div className="metric-check-circle metric-check-circle--blue">✓</div>
             <div>
-              <div className="metric-card-title">1,000+ sources searched</div>
-              <div className="metric-card-sub">Real-time aggregators</div>
+              <div className="metric-card-title">1000+ jobs live across India</div>
+              <div className="metric-card-sub">Top verified companies</div>
             </div>
           </div>
         </div>
